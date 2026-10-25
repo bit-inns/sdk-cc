@@ -1,0 +1,15 @@
+# ai
+.agent
+
+# cc
+build
+
+# ide
+.vscode
+
+# os
+._*
+.DS_Store
+
+# spec
+libs
