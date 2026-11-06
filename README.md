@@ -1,4 +1,4 @@
-# sdk
+# Software Development Kit - C/C++
 
 C++ SDK requiring CMake 3.20+ and C++23.
 
