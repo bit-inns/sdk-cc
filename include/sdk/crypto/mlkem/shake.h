@@ -1,5 +1,5 @@
-#ifndef CRYPTO_MLKEM_SHAKE_H
-#define CRYPTO_MLKEM_SHAKE_H
+#ifndef SDK_CRYPTO_MLKEM_SHAKE_H
+#define SDK_CRYPTO_MLKEM_SHAKE_H
 
 #include <cstddef>
 #include <cstdint>
@@ -7,7 +7,7 @@
 #include "sdk/crypto/sha/sha3.h"
 
 
-namespace crypto::mlkem
+namespace sdk::crypto::mlkem
 {
 
 
@@ -34,7 +34,7 @@ void shake256_rkprf(
 );
 
 
-} // namespace crypto::mlkem
+} // namespace sdk::crypto::mlkem
 
 
-#endif // #ifndef CRYPTO_MLKEM_SHAKE_H
+#endif // #ifndef SDK_CRYPTO_MLKEM_SHAKE_H

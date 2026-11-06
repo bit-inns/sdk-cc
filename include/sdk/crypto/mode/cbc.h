@@ -1,12 +1,12 @@
-#ifndef CRYPTO_MODE_CBC_H
-#define CRYPTO_MODE_CBC_H
+#ifndef SDK_CRYPTO_MODE_CBC_H
+#define SDK_CRYPTO_MODE_CBC_H
 
 #include <array>
 #include <cstddef>
 #include <cstdint>
 
 
-namespace crypto::mode
+namespace sdk::crypto::mode
 {
 
 
@@ -91,7 +91,7 @@ bool cbc_decrypt(DecryptBlock &&decrypt_block, uint8_t *out, const uint8_t *in, 
 }
 
 
-} // namespace crypto::mode
+} // namespace sdk::crypto::mode
 
 
-#endif // #ifndef CRYPTO_MODE_CBC_H
+#endif // #ifndef SDK_CRYPTO_MODE_CBC_H

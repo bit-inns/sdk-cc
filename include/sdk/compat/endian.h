@@ -1,5 +1,5 @@
-#ifndef COMPAT_ENDIAN_H
-#define COMPAT_ENDIAN_H
+#ifndef SDK_COMPAT_ENDIAN_H
+#define SDK_COMPAT_ENDIAN_H
 
 #include <bit>
 #include <cstdint>
@@ -7,7 +7,7 @@
 #include "sdk/compat/byte_swap.h"
 
 
-namespace compat
+namespace sdk::compat
 {
 
 
@@ -29,7 +29,7 @@ uint32_t betoh32(uint32_t x);
 uint32_t letoh32(uint32_t x);
 
 
-} // namespace compat
+} // namespace sdk::compat
 
 
-#endif // #ifndef COMPAT_ENDIAN_H
+#endif // #ifndef SDK_COMPAT_ENDIAN_H

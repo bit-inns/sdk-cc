@@ -1,5 +1,5 @@
-#ifndef SERIALIZATION_IMPL_H
-#define SERIALIZATION_IMPL_H
+#ifndef SDK_SERIALIZATION_IMPL_H
+#define SDK_SERIALIZATION_IMPL_H
 
 #include <array>
 #include <cstdint>
@@ -12,7 +12,7 @@
 #include "serializer.h"
 
 
-namespace serialization
+namespace sdk::serialization
 {
 
 
@@ -129,7 +129,7 @@ inline void deserialize(Deserializer &deserializer, std::basic_string<char_t, tr
 }
 
 
-} // namespace serialization
+} // namespace sdk::serialization
 
 
-#endif // #ifndef SERIALIZATION_IMPL_H
+#endif // #ifndef SDK_SERIALIZATION_IMPL_H

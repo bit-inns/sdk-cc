@@ -1,19 +1,19 @@
-#ifndef CRYPTO_RAND_H
-#define CRYPTO_RAND_H
+#ifndef SDK_CRYPTO_RAND_H
+#define SDK_CRYPTO_RAND_H
 
 #include <cstddef>
 #include <cstdint>
 #include <cstdlib>
 
 
-namespace crypto
+namespace sdk::crypto
 {
 
 
 void gen_rand_bytes(uint8_t *out, std::size_t len);
 
 
-} // namespace crypto
+} // namespace sdk::crypto
 
 
-#endif // #ifndef CRYPTO_RAND_H
+#endif // #ifndef SDK_CRYPTO_RAND_H

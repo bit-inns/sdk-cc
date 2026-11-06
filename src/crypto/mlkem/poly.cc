@@ -3,7 +3,7 @@
 #include "sdk/crypto/mlkem/mlkem.h"
 
 
-namespace crypto::mlkem
+namespace sdk::crypto::mlkem
 {
 
 
@@ -305,4 +305,4 @@ void poly_vec_decompress(const mlkem_ctx *ctx, const uint8_t *in, poly_vec *p) {
 }
 
 
-} // namespace crypto::mlkem
+} // namespace sdk::crypto::mlkem

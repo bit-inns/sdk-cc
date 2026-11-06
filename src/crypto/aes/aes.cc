@@ -1,7 +1,7 @@
 #include "sdk/crypto/aes/aes.h"
 
 
-namespace crypto::aes
+namespace sdk::crypto::aes
 {
 
 
@@ -529,4 +529,4 @@ void decrypt(aes_set set, const uint8_t *key, uint8_t out[aes_block_len], const 
 }
 
 
-} // namespace crypto::aes
+} // namespace sdk::crypto::aes

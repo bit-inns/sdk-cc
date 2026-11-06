@@ -1,7 +1,7 @@
 #include "sdk/crypto/ctops.h"
 
 
-namespace crypto
+namespace sdk::crypto
 {
 
 
@@ -27,4 +27,4 @@ void cmov_int16(int16_t in, int16_t *out, uint16_t b) {
 }
 
 
-} // namespace crypto
+} // namespace sdk::crypto

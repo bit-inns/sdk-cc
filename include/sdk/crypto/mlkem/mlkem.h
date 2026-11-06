@@ -1,5 +1,5 @@
-#ifndef CRYPTO_MLKEM_MLKEM_H
-#define CRYPTO_MLKEM_MLKEM_H
+#ifndef SDK_CRYPTO_MLKEM_MLKEM_H
+#define SDK_CRYPTO_MLKEM_MLKEM_H
 
 #include <cstddef>
 #include <cstdint>
@@ -15,7 +15,7 @@
 #include "sdk/crypto/sha/sha3.h"
 
 
-namespace crypto::mlkem
+namespace sdk::crypto::mlkem
 {
 
 
@@ -85,7 +85,7 @@ void mlkem_encap(mlkem_set set, uint8_t *cipher, uint8_t *sk, const uint8_t *ek)
 void mlkem_decap(mlkem_set set, uint8_t *ss, uint8_t *cipher, uint8_t *dk) noexcept;
 
 
-} // namespace crypto::mlkem
+} // namespace sdk::crypto::mlkem
 
 
-#endif // #ifndef CRYPTO_MLKEM_MLKEM_H
+#endif // #ifndef SDK_CRYPTO_MLKEM_MLKEM_H

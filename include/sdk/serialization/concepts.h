@@ -1,10 +1,10 @@
-#ifndef SERIALIZATION_CONCEPTS_H
-#define SERIALIZATION_CONCEPTS_H
+#ifndef SDK_SERIALIZATION_CONCEPTS_H
+#define SDK_SERIALIZATION_CONCEPTS_H
 
 #include <concepts>
 
 
-namespace serialization
+namespace sdk::serialization
 {
 
 
@@ -28,7 +28,7 @@ concept has_non_member_deserialize_method = requires(Deserializer& deserializer,
 };
 
 
-} // namespace serialization
+} // namespace sdk::serialization
 
 
-#endif // #ifndef SERIALIZATION_CONCEPTS_H
+#endif // #ifndef SDK_SERIALIZATION_CONCEPTS_H

@@ -1,5 +1,5 @@
-#ifndef CRYPTO_H
-#define CRYPTO_H
+#ifndef SDK_CRYPTO_H
+#define SDK_CRYPTO_H
 
 #include "sdk/crypto/ctops.h"
 #include "sdk/crypto/macro.h"
@@ -13,4 +13,4 @@
 
 #include "sdk/crypto/sha/sha3.h"
 
-#endif // #ifndef CRYPTO_H
+#endif // #ifndef SDK_CRYPTO_H

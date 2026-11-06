@@ -1,7 +1,7 @@
 #include "sdk/compat/endian.h"
 
 
-namespace compat
+namespace sdk::compat
 {
 
 
@@ -47,4 +47,4 @@ uint32_t letoh32(uint32_t x) {
 }
 
 
-} // namespace compat
+} // namespace sdk::compat

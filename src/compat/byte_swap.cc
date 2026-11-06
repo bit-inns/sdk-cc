@@ -1,7 +1,7 @@
 #include "sdk/compat/byte_swap.h"
 
 
-namespace compat
+namespace sdk::compat
 {
 
 
@@ -26,4 +26,4 @@ uint64_t bswap64(uint64_t x) {
 }
 
 
-} // namespace compat
+} // namespace sdk::compat

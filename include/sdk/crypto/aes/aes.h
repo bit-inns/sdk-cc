@@ -1,5 +1,5 @@
-#ifndef CRYPTO_AES_AES_H
-#define CRYPTO_AES_AES_H
+#ifndef SDK_CRYPTO_AES_AES_H
+#define SDK_CRYPTO_AES_AES_H
 
 #include <cstdint>
 #include <cstring>
@@ -7,7 +7,7 @@
 #include "sdk/crypto/macro.h"
 
 
-namespace crypto::aes
+namespace sdk::crypto::aes
 {
 
 
@@ -32,7 +32,7 @@ void encrypt(aes_set set, const uint8_t *key, uint8_t out[aes_block_len], const 
 void decrypt(aes_set set, const uint8_t *key, uint8_t out[aes_block_len], const uint8_t in[aes_block_len]) noexcept;
 
 
-} // namespace crypto::aes
+} // namespace sdk::crypto::aes
 
 
-#endif // #ifndef CRYPTO_AES_AES_H
+#endif // #ifndef SDK_CRYPTO_AES_AES_H

@@ -1,11 +1,11 @@
-#ifndef CRYPTO_CTOPS_H
-#define CRYPTO_CTOPS_H
+#ifndef SDK_CRYPTO_CTOPS_H
+#define SDK_CRYPTO_CTOPS_H
 
 #include <cstdint>
 #include <cstdlib>
 
 
-namespace crypto
+namespace sdk::crypto
 {
 
   
@@ -36,7 +36,7 @@ void cmov_uint8(const uint8_t *in, uint8_t *out, size_t len, uint8_t b);
 void cmov_int16(int16_t in, int16_t *out, uint16_t b);
 
 
-} // namespace crypto
+} // namespace sdk::crypto
 
 
-#endif // #ifndef CRYPTO_CTOPS_H
+#endif // #ifndef SDK_CRYPTO_CTOPS_H

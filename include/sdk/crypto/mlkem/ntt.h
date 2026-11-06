@@ -1,12 +1,12 @@
-#ifndef CRYPTO_MLKEM_NTT_H
-#define CRYPTO_MLKEM_NTT_H
+#ifndef SDK_CRYPTO_MLKEM_NTT_H
+#define SDK_CRYPTO_MLKEM_NTT_H
 
 #include <cstdint>
 
 #include "sdk/crypto/macro.h"
 
 
-namespace crypto::mlkem
+namespace sdk::crypto::mlkem
 {
 
 
@@ -41,7 +41,7 @@ void inv_ntt(int16_t v[256]);
 void basemul(int16_t p[2], const int16_t a[2], const int16_t b[2], int16_t zeta);
 
 
-} // namespace crypto::mlkem
+} // namespace sdk::crypto::mlkem
 
 
-#endif // #ifndef CRYPTO_MLKEM_NTT_H
+#endif // #ifndef SDK_CRYPTO_MLKEM_NTT_H

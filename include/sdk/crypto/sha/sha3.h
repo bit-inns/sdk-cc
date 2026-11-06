@@ -1,5 +1,5 @@
-#ifndef CRYPTO_SHA_SHA3_H
-#define CRYPTO_SHA_SHA3_H
+#ifndef SDK_CRYPTO_SHA_SHA3_H
+#define SDK_CRYPTO_SHA_SHA3_H
 
 #include <cstddef>
 #include <cstdint>
@@ -9,7 +9,7 @@
 #include "sdk/crypto/macro.h"
 
 
-namespace crypto::sha
+namespace sdk::crypto::sha
 {
 
 
@@ -64,7 +64,7 @@ void shake(shake_set set, uint8_t *out, size_t outlen, const uint8_t *in, size_t
 void sha3(sha3_set set, uint8_t *out, const uint8_t *in, size_t inlen) noexcept;
 
 
-} // namespace crypto::sha
+} // namespace sdk::crypto::sha
 
 
-#endif // #ifndef CRYPTO_SHA_SHA3_H
+#endif // #ifndef SDK_CRYPTO_SHA_SHA3_H

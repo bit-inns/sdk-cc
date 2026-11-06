@@ -13,7 +13,7 @@
 #endif // #if defined(__linux__) || defined(__APPLE__)
 
 
-namespace crypto
+namespace sdk::crypto
 {
 
 
@@ -39,4 +39,4 @@ void gen_rand_bytes(uint8_t *out, std::size_t len) {
 }
 
 
-} // namespace crypto
+} // namespace sdk::crypto

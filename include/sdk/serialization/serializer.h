@@ -1,12 +1,12 @@
-#ifndef SERIALIZATION_SERIALIZER_H
-#define SERIALIZATION_SERIALIZER_H
+#ifndef SDK_SERIALIZATION_SERIALIZER_H
+#define SDK_SERIALIZATION_SERIALIZER_H
 
 #include <iostream>
 
 #include "concepts.h"
 
 
-namespace serialization
+namespace sdk::serialization
 {
 
 
@@ -78,7 +78,7 @@ public:
 };
 
 
-} // namespace serialization
+} // namespace sdk::serialization
 
 
-#endif // #ifndef SERIALIZATION_SERIALIZER_H
+#endif // #ifndef SDK_SERIALIZATION_SERIALIZER_H

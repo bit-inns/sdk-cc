@@ -1,7 +1,7 @@
 #include "sdk/crypto/mlkem/ntt.h"
 
 
-namespace crypto::mlkem
+namespace sdk::crypto::mlkem
 {
 
 
@@ -94,4 +94,4 @@ void basemul(int16_t p[2], const int16_t a[2], const int16_t b[2], int16_t zeta)
 }
 
 
-} // namespace crypto::mlkem
+} // namespace sdk::crypto::mlkem

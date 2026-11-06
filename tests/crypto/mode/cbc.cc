@@ -48,10 +48,10 @@ void test_aes() {
     0x3f, 0xf1, 0xca, 0xa1, 0x68, 0x1f, 0xac, 0x09, 0x12, 0x0e, 0xca, 0x30, 0x75, 0x86, 0xe1, 0xa7
   };
   auto encrypt = [&](uint8_t *out, const uint8_t *in) {
-    crypto::aes::encrypt(crypto::aes::aes_set::aes128, key, out, in);
+    sdk::crypto::aes::encrypt(sdk::crypto::aes::aes_set::aes128, key, out, in);
   };
   auto decrypt = [&](uint8_t *out, const uint8_t *in) {
-    crypto::aes::decrypt(crypto::aes::aes_set::aes128, key, out, in);
+    sdk::crypto::aes::decrypt(sdk::crypto::aes::aes_set::aes128, key, out, in);
   };
   std::cout << "AES-128 CBC key" << std::endl;
   print_bytes(key, sizeof(key));
@@ -62,13 +62,13 @@ void test_aes() {
 
   auto iv = initial_iv;
   std::array<uint8_t, 64> output;
-  check(crypto::mode::cbc_encrypt<16>(encrypt, output.data(), plain.data(), plain.size(), iv.data()));
+  check(sdk::crypto::mode::cbc_encrypt<16>(encrypt, output.data(), plain.data(), plain.size(), iv.data()));
   std::cout << "Ciphertext" << std::endl;
   print_bytes(output.data(), output.size());
   check(output == expected);
   check(std::equal(iv.begin(), iv.end(), expected.end()-16));
   iv = initial_iv;
-  check(crypto::mode::cbc_decrypt<16>(decrypt, output.data(), expected.data(), expected.size(), iv.data()));
+  check(sdk::crypto::mode::cbc_decrypt<16>(decrypt, output.data(), expected.data(), expected.size(), iv.data()));
   std::cout << "Decrypted plaintext" << std::endl;
   print_bytes(output.data(), output.size());
   check(output == plain);
@@ -76,12 +76,12 @@ void test_aes() {
 
   output = plain;
   iv = initial_iv;
-  check(crypto::mode::cbc_encrypt<16>(encrypt, output.data(), output.data(), 16, iv.data()));
-  check(crypto::mode::cbc_encrypt<16>(encrypt, output.data()+16, output.data()+16, 48, iv.data()));
+  check(sdk::crypto::mode::cbc_encrypt<16>(encrypt, output.data(), output.data(), 16, iv.data()));
+  check(sdk::crypto::mode::cbc_encrypt<16>(encrypt, output.data()+16, output.data()+16, 48, iv.data()));
   check(output == expected);
   iv = initial_iv;
-  check(crypto::mode::cbc_decrypt<16>(decrypt, output.data(), output.data(), 32, iv.data()));
-  check(crypto::mode::cbc_decrypt<16>(decrypt, output.data()+32, output.data()+32, 32, iv.data()));
+  check(sdk::crypto::mode::cbc_decrypt<16>(decrypt, output.data(), output.data(), 32, iv.data()));
+  check(sdk::crypto::mode::cbc_decrypt<16>(decrypt, output.data()+32, output.data()+32, 32, iv.data()));
   check(output == plain);
 }
 
@@ -100,12 +100,12 @@ void test_generic() {
   std::array<uint8_t, 6> data = {4, 5, 6, 7, 8, 9};
   const auto plain = data;
   const std::array<uint8_t, 6> expected = {133, 135, 133, 2, 15, 12};
-  check(crypto::mode::cbc_encrypt<3>(cipher, data.data(), data.data(), data.size(), iv.data()));
+  check(sdk::crypto::mode::cbc_encrypt<3>(cipher, data.data(), data.data(), data.size(), iv.data()));
   std::cout << "Three-byte test cipher CBC ciphertext" << std::endl;
   print_bytes(data.data(), data.size());
   check(data == expected);
   iv = initial_iv;
-  check(crypto::mode::cbc_decrypt<3>(cipher, data.data(), data.data(), data.size(), iv.data()));
+  check(sdk::crypto::mode::cbc_decrypt<3>(cipher, data.data(), data.data(), data.size(), iv.data()));
   std::cout << "Decrypted plaintext" << std::endl;
   print_bytes(data.data(), data.size());
   check(data == plain);
@@ -118,14 +118,14 @@ void test_generic() {
       const uint8_t *in = invalid == 2 ? nullptr : data.data();
       uint8_t *chain = invalid == 3 ? nullptr : iv.data();
       const std::size_t len = invalid == 0 ? 5 : 6;
-      bool result = decrypt ? crypto::mode::cbc_decrypt<3>(cipher, out, in, len, chain)
-                            : crypto::mode::cbc_encrypt<3>(cipher, out, in, len, chain);
+      bool result = decrypt ? sdk::crypto::mode::cbc_decrypt<3>(cipher, out, in, len, chain)
+                            : sdk::crypto::mode::cbc_encrypt<3>(cipher, out, in, len, chain);
       check(!result && calls == before_calls && data == plain && iv == initial_iv);
     }
   }
   const auto before_calls = calls;
-  check(crypto::mode::cbc_encrypt<3>(cipher, nullptr, nullptr, 0, nullptr));
-  check(crypto::mode::cbc_decrypt<3>(cipher, nullptr, nullptr, 0, nullptr));
+  check(sdk::crypto::mode::cbc_encrypt<3>(cipher, nullptr, nullptr, 0, nullptr));
+  check(sdk::crypto::mode::cbc_decrypt<3>(cipher, nullptr, nullptr, 0, nullptr));
   check(calls == before_calls);
 }
 

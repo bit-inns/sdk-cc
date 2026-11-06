@@ -1,7 +1,7 @@
 #include "sdk/crypto/sha/sha3.h"
 
 
-namespace crypto::sha
+namespace sdk::crypto::sha
 {
 
 
@@ -437,4 +437,4 @@ void sha3(sha3_set set, uint8_t *out, const uint8_t *in, size_t inlen) noexcept 
 }
 
 
-} // namespace crypto::sha
+} // namespace sdk::crypto::sha

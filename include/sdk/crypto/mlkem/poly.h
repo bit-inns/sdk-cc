@@ -1,5 +1,5 @@
-#ifndef CRYPTO_MLKEM_POLY_H
-#define CRYPTO_MLKEM_POLY_H
+#ifndef SDK_CRYPTO_MLKEM_POLY_H
+#define SDK_CRYPTO_MLKEM_POLY_H
 
 #include <cstdint>
 
@@ -8,7 +8,7 @@
 #include "sdk/crypto/mlkem/ntt.h"
 
 
-namespace crypto::mlkem
+namespace sdk::crypto::mlkem
 {
 
 
@@ -81,7 +81,7 @@ void poly_vec_compress(const mlkem_ctx *ctx, const poly_vec *p, uint8_t *out);
 void poly_vec_decompress(const mlkem_ctx *ctx, const uint8_t *in, poly_vec *p);
 
 
-} // namespace crypto::mlkem
+} // namespace sdk::crypto::mlkem
 
 
-#endif // #ifndef CRYPTO_MLKEM_POLY_H
+#endif // #ifndef SDK_CRYPTO_MLKEM_POLY_H

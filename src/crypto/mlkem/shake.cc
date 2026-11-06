@@ -5,7 +5,7 @@
 #include "sdk/crypto/mlkem/mlkem.h"
 
 
-namespace crypto::mlkem
+namespace sdk::crypto::mlkem
 {
 
 
@@ -40,4 +40,4 @@ void shake256_rkprf(
 }
 
 
-} // namespace crypto::mlkem
+} // namespace sdk::crypto::mlkem

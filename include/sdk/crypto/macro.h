@@ -1,10 +1,10 @@
-#ifndef CRYPTO_MACRO_H
-#define CRYPTO_MACRO_H
+#ifndef SDK_CRYPTO_MACRO_H
+#define SDK_CRYPTO_MACRO_H
 
 #include <cstdint>
 
 
-namespace crypto::aes
+namespace sdk::crypto::aes
 {
 
 
@@ -30,10 +30,10 @@ inline constexpr unsigned int aes_round_key_len = 16;
 inline constexpr unsigned int aes_key_word_len = 4;
 
 
-} // namespace crypto::aes
+} // namespace sdk::crypto::aes
 
 
-namespace crypto::sha
+namespace sdk::crypto::sha
 {
 
 
@@ -72,10 +72,10 @@ inline constexpr unsigned int sha3_512_rate = 72;
 inline constexpr uint8_t sha3_suffix = 0x06;
 
 
-} // namespace crypto::sha
+} // namespace sdk::crypto::sha
 
 
-namespace crypto::mlkem
+namespace sdk::crypto::mlkem
 {
 
 
@@ -138,7 +138,7 @@ inline constexpr unsigned int mlkem768_dk_len = mlkem768_poly_vec_len * 2 + seed
 inline constexpr unsigned int mlkem1024_dk_len = mlkem1024_poly_vec_len * 2 + seed_len * 2 + sha::hash256_len;
 
 
-} // namespace crypto::mlkem
+} // namespace sdk::crypto::mlkem
 
 
-#endif // #ifndef CRYPTO_MACRO_H
+#endif // #ifndef SDK_CRYPTO_MACRO_H

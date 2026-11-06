@@ -5,7 +5,7 @@
 #include <cstring>
 
 
-namespace crypto::mlkem
+namespace sdk::crypto::mlkem
 {
 
 
@@ -369,4 +369,4 @@ void mlkem_decap(mlkem_set set, uint8_t *ss, uint8_t *cipher, uint8_t *dk) noexc
 }
 
 
-} // namespace crypto::mlkem
+} // namespace sdk::crypto::mlkem

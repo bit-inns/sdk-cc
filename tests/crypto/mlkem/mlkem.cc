@@ -23,7 +23,7 @@ inline void print_numbers(const uint8_t *in, std::size_t len) {
 }
 
 
-uint8_t drb[crypto::mlkem::seed_len]{
+uint8_t drb[sdk::crypto::mlkem::seed_len]{
   0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08,
   0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F, 0x10,
   0x11, 0x12, 0x13, 0x14, 0x15, 0x16, 0x17, 0x18,
@@ -32,7 +32,7 @@ uint8_t drb[crypto::mlkem::seed_len]{
 
 
 int main(int argc, char* argv[]) {
-  using namespace crypto::mlkem;
+  using namespace sdk::crypto::mlkem;
 
   const auto set = mlkem_set::mlkem_1024;
   mlkem_ctx ctx;
